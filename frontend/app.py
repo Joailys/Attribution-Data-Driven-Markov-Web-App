@@ -37,7 +37,7 @@ if submitted:
             "credentials_json": json.dumps(creds_json)
         }
         with st.spinner("Extraction des données depuis BigQuery..."):
-            resp = requests.post("http://localhost:8000/run_query/", json=payload)
+          resp = requests.post("https://attribution-data-driven-markov-web-app.onrender.com/run_query/", json=payload)
         if resp.status_code == 200:
             data = resp.json()
             st.session_state.df = pd.DataFrame(data["data"])
@@ -74,7 +74,7 @@ if st.session_state.df is not None:
                 **mapping
             }
             analyze_resp = requests.post(
-                "http://localhost:8000/analyze/",
+                "https://attribution-data-driven-markov-web-app.onrender.com/analyze/",
                 json=analyze_payload
             )
         if analyze_resp.status_code == 200:
