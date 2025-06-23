@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.set_page_config(page_title="Attribution Data-Driven", layout="wide")
-st.title("Attribution Data-Driven (Markov) – Web App")
+st.title("Attribution Data-Driven (Markov) – by Simon Lemaitre")
 
 st.markdown("""
 Téléversez votre fichier JSON de compte de service Google, saisissez l'ID du projet et une requête SQL BigQuery. L'application extraira les données et calculera l'attribution data-driven.
