@@ -21,8 +21,8 @@ if 'results' not in st.session_state:
     st.session_state.results = None
 
 with st.form("query_form"):
-    project_id = st.text_input("ID projet GCP", value="coyote-370017")
-    query = st.text_area("Requête SQL BigQuery", value="SELECT * FROM `coyote-370017.tag_web.raw_conversions_first_click` LIMIT 1000")
+    project_id = st.text_input("ID projet GCP", value="project-id")
+    query = st.text_area("Requête SQL BigQuery", value="SELECT * FROM `project-ID.ressourceID.tableID` LIMIT 1000")
     credentials_file = st.file_uploader("Fichier JSON de compte de service Google", type=["json"])
     submitted = st.form_submit_button("Extraire les données")
 
